@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body{
+    font-family: 'Poppins', sans-serif; 
+    background-color:black;
+  }
+
+  header{
+    display: inline-block;
+    position: relative;
+    background-color:blueviolet;
+    width: 100%;
+    height: 50px;
+    padding-top: 20px;
+    padding-bottom:50px;
+    padding-left: 80px;
+    padding-right: 80px;
+    color: white;
+    font-weight: light;
+    font-size: 14px;
+  }
+  
+  .page__links a{
+    display: inline;
+    position: relative;
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    text-align: center;
+  }
+  
+  .page__links li{
+    display: inline;
+    position: relative;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  .page__logo{
+    display: inline;
+    position: relative;
+    margin-right: 450px;
+    font-weight: bolder;
+    font-size: large;
+  }
+
+  .contact__top{
+    display: inline-block;
+    position: relative;
+    background-color:black;
+    height: 440px;
+    padding-left: 150px;
+    padding-right: 150px;
+    overflow: hidden;
+  }
+
+  .tittle__1{
+    color: rgb(202, 254, 125);
+    display: block;
+    font-size: 40px;
+    font-weight: 900;
+    margin-top: 120px;
+    margin-right: 500px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    
+  }
+  
+  
+  .contact__img__top{
+    display: inline-block;
+    position: relative;
+    height: 550px;
+    width: fit-content;
+    top: -325px;
+    left: 650px;
+    overflow: hidden;
+  }
+  
+  .img__top{
+    display: block;
+    position: relative;
+    height: 500px;
+    width: 600px;
+  }
+
+  .contact__wrapper{
+    display: block;
+    position: relative;
+    height: 700px;
+    width: 100%;
+    background-color: white;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    
+  }
+
+  .footer{
+    background-color:black;
+    height: 250px;
+    color: white;
+    padding-left: 200px;
+    padding-right: 200px;
+    line-height: 2;
+  }
+  
+  .content__3{
+    display: inline-block;
+    margin-left: 600px;
+    padding-top:40px;
+  }
+  
+  .tittle__3{
+    display: inline;
+    position: relative;
+    font-weight: bolder;
+    font-size: 40px;
+    color:  rgb(202, 254, 125);
+    margin-left: 20px;
+  }
+  
+  .content__3 li{
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    
+  }
+  
+  .footer__items li{
+    text-decoration: none;
+  }
+  
+  .footer__items a{
+    text-decoration: none;
+    color: white;
+  }
+  
+  .footer__items img{
+    display: inline-block;
+    width: 15px;
+    position: relative;
+    filter:invert(100%);
+    margin-left: 20px;
+  }

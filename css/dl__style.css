@@ -1,0 +1,923 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: aliceblue;
+    color: white;
+    height: 100vh;
+}
+
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+.header{
+    background-color: black;
+    position: fixed;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    width: 100%;
+}
+
+.logo{
+    display: inline-block;
+    color: white;
+    font-size: 20px;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.nav{
+    width: 100%;
+    height: 360%;
+    position: fixed;
+    overflow: hidden;
+    right: 50px;
+
+}
+.menu a{
+    display: block;
+    padding: 20px;
+    color: white;
+    
+    
+}
+.menu a:hover{
+    background-color: greenyellow;
+}
+.nav{
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+
+/* Menu Icon */
+.hamb{
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+}
+/* Style label tag */
+
+.hamb-line {
+    background: white;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+
+} 
+/* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after{
+    background: white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.hamb-line::before{
+    top: 5px;
+}
+.hamb-line::after{
+    top: -5px;
+}
+
+.side-menu {
+    display: none;
+} 
+/* Hide checkbox */
+
+/* Toggle menu icon */
+.side-menu:checked ~ nav{
+    max-height: 100%;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
+}
+
+.grid__container{
+    display: grid;
+    grid-template-areas: 
+    "top__left"
+    "top__right"
+    "service1"
+    "service2"
+    "service3"
+    "service4"
+    "aditional__info"
+    "footer";
+    overflow-x: hidden;
+    
+}
+
+.top__left{
+    display: flex;
+    grid-area:top__left;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    background-color:blueviolet;
+    color: white;
+    height: 500px;
+    width: 100%;
+}
+
+.content__top{
+    display: flexbox;
+    font-family: 'Poppins', sans-serif;
+    padding:100px 50px 50px 50px
+    
+}
+.tittle1{
+    display: block;
+    font-size: 30px;
+    text-align: center;
+}
+
+.text1{
+    display: block;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 200;
+    line-height: 1.8;
+    margin-top: 20px;
+}
+
+
+.top__right{
+    display: flex;
+    grid-area:top__right;
+    background-color:blueviolet;
+    height: 300px;
+    justify-content:center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.right__img{
+    display: flex;
+    width: 530px;
+}
+
+.service1{
+    display: flex;
+    grid-area:service1;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    height: 550px;
+    padding: 0px 30px 0px 30px;
+}
+
+
+.service2{
+    display: flex;
+    grid-area:service2;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    height: 550px;
+    padding: 0px 30px 0px 30px;
+}
+
+.service3{
+    display: flex;
+    grid-area:service3;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    height: 550px;
+    padding: 0px 30px 0px 30px;
+}
+
+.service4{
+    display: flex;
+    grid-area:service4;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    height: 550px;
+    padding: 0px 30px 0px 30px;
+}
+
+
+.card .card__img{
+    width: 260px;
+}
+
+.card__img{
+    display: block;
+    position: relative;
+}
+.service__cards{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;  
+    height: 480px;
+    width: fit-content;
+    background-color:white;
+    border-radius: 15px;
+    color: black;
+    overflow: hidden;
+}
+
+.card__info{
+    display: block;
+    padding: 30px 30px 30px 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.tittle__card{
+    display: block;
+    font-size: 30px;
+}
+
+.text__card{
+    display: block;
+    font-size: 14px;
+    margin: 10px 0px 40px 0px;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+.card__btn{
+    background-color: white;
+    color: black;
+    height: 40px;
+    width: 100px;
+    border-style: solid;
+    border-color:blueviolet;
+    border-width: 2px;
+    border-radius: 5px;
+}
+
+.aditional__info{
+    grid-area:aditional__info;
+    background-color:blue;
+    height: 300px;
+    width: 100%;
+}
+
+.footer{
+    display: flex;
+    grid-area:footer;
+    background-color:black;
+    height: 250px;
+    width: 100%;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+.footer .footer__img{
+    display: none;
+}
+
+.content__3{
+    display: block;
+    margin-left: 30px;
+    margin-right: 30px;
+}   
+  
+  .tittle__3{
+    display: inline;
+    position: relative;
+    font-weight: bolder;
+    font-size: 30px;
+    color:  rgb(202, 254, 125);
+    margin-left: 20px;
+  }
+  
+  .content__3 li{
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    
+  }
+  
+  .footer__items li{
+    text-decoration: none;
+    font-size: 12px;
+  }
+  
+  .footer__items a{
+    text-decoration: none;
+    color: white;
+    
+  }
+  
+  .footer__items img{
+    display: inline-block;
+    width: 15px;
+    position: relative;
+    filter:invert(100%);
+    margin-left: 20px;
+  }
+
+
+
+
+
+@media only screen and (min-width: 425px) {
+    .grid__container{
+        display: grid;
+        grid-template-areas: 
+        "top__left"
+        "top__right"
+        "service1"
+        "service2"
+        "service3"
+        "service4"
+        "aditional__info"
+        "footer";
+        overflow-x: hidden;
+        
+    }
+    
+    .top__left{
+        display: flex;
+        grid-area:top__left;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content:center;
+        align-items: center;
+        text-align: center;
+        background-color:blueviolet;
+        color: white;
+        height: 450px;
+        width: 100%;
+    }
+    
+    .content__top{
+        display: flexbox;
+        font-family: 'Poppins', sans-serif;
+        padding:100px 60px 50px 60px
+        
+    }
+    .tittle1{
+        display: block;
+        font-size: 40px;
+        text-align: center;
+    }
+    
+    .text1{
+        display: block;
+        font-size: 14px;
+        text-align: center;
+        font-weight: 200;
+        line-height: 1.8;
+        margin-top: 20px;
+    }
+    
+    
+    .top__right{
+        display: flex;
+        grid-area:top__right;
+        height: 300px;
+        justify-content:center;
+        align-items: center;
+        overflow: hidden;
+    }
+    
+    .right__img{
+        display: flex;
+        width: 570px;
+    }
+
+    .card .card__img{
+        width: 340px;
+    }
+    
+    .card__img{
+        display: block;
+        position: relative;
+    }
+    
+    .service1{
+        padding: 0px 50px 0px 50px;
+    }
+
+    .service2{
+        padding: 0px 50px 0px 50px;
+    }
+    
+    .service3{
+        padding: 0px 50px 0px 50px;
+    }
+    
+    .service4{
+        padding: 0px 50px 0px 50px;
+    }
+
+    .footer .footer__img{
+        display: none;
+    }
+    
+    .content__3{
+        display: block;
+        margin-left: 30px;
+        margin-right: 30px;
+        
+      }
+}
+
+@media only screen and (min-width: 768px) {
+    .grid__container{
+        display: grid;
+        grid-template-columns: 0.2fr 0.2fr;
+        grid-template-areas: 
+        "top__left top__left" 
+        "top__right top__right"
+        "service1 service2"
+        "service3 service4"
+        "aditional__info aditional__info "
+        "footer footer";
+        overflow-x: hidden;
+    }
+    .top__left{
+        display: flex;
+        grid-area:top__left;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content:center;
+        align-items: center;
+        text-align: center;
+        background-color:blueviolet;
+        color: white;
+        height: 420px;
+        width: 100%;
+    }
+
+    .content__top{
+        display: flexbox;
+        font-family: 'Poppins', sans-serif;
+        padding:120px 120px 50px 120px
+        
+    }
+    .tittle1{
+        display: block;
+        font-size: 45px;
+        text-align: center;
+    }
+    
+    .text1{
+        display: block;
+        font-size: 15px;
+        text-align: center;
+        font-weight: 200;
+        line-height: 1.8;
+        margin-top: 20px;
+    }
+
+    .top__right{
+        display: flex;
+        grid-area:top__right;
+        background-color:blueviolet;
+        height: 250px;
+        width: 100%;
+        justify-items:center;
+        align-items:center;
+        overflow: hidden;
+    }
+    
+    .right__img{
+        display: flex;
+        position: relative;
+        left: 1px;
+        width: 780px;
+    }
+
+    .service__cards{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        text-align: center;
+        flex-wrap: wrap;  
+        height: 500px;
+        width: 325px;
+    }
+    
+    .card__info{
+        display: block;
+        width: 320px;
+        padding: 10px 30px 50px 30px;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    .tittle__card{
+        display: block;
+        font-size: 30px;
+    }
+    
+    .text__card{
+        display: block;
+        font-size: 14px;
+        margin: 10px 0px 40px 0px;
+        line-height: 1.8;
+        font-weight: 300;
+    }
+
+    .card .card__img{
+        width: 330px;
+        overflow: hidden;
+    }
+    
+    .card__img{
+        display: block;
+        position: relative;
+        top: -20px;
+        
+    }
+    
+    .card__btn{
+        background-color: white;
+        color: black;
+        height: 40px;
+        width: 100px;
+        border-style: solid;
+        border-color:blueviolet;
+        border-width: 2px;
+        border-radius: 5px;
+    }
+
+    .service1{
+        justify-content:flex-end;
+        align-items:flex-end;
+        text-align: center;
+        height: 550px;
+        padding: 0px 15px 0px 50px;
+    }
+
+    .service2{
+        justify-content:flex-start;
+        align-items:flex-end;
+        text-align: center;
+        height: 550px;
+        padding: 0px 30px 0px 15px;
+        
+    }
+    
+    .service3{
+        justify-content:flex-end;
+        align-items:flex-start;
+        text-align: center;
+        height: 550px;
+        padding: 30px 15px 0px 30px;
+        
+    }
+    
+    .service4{
+        justify-content:flex-start;
+        align-items:flex-start;
+        text-align: center;
+        height: 550px;
+        padding: 30px 30px 0px 15px;
+        
+    }
+
+    .footer .footer__img{
+        display: block;
+        position: relative;
+        left: 1px;
+        height: 250px;
+    }
+    
+    .content__3{
+        display: inline-block;
+        margin-left: 20px;
+        margin-right: 20px;
+        
+      }
+    
+}
+
+
+@media (min-width: 1129px) {
+    .nav{
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+    }
+    .menu li{
+        float: left;
+    }
+    .menu a:hover{
+        background-color: transparent;
+        color: greenyellow;
+
+    }
+
+    .hamb{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .grid__container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "top__left top__right"
+        "service1 service2"
+        "service3 service4"
+        "aditional__info aditional__info "
+        "footer footer";
+        overflow-x: hidden;
+    }
+    .top__left{
+        display: flex;
+        grid-area:top__left;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content:center;
+        align-items: center;
+        text-align: center;
+        background-color:blueviolet;
+        color: white;
+        height: 600px;
+        width: 100%;
+    }
+
+    .content__top{
+        display: flexbox;
+        font-family: 'Poppins', sans-serif;
+        padding:0px 0px 0px 100px
+        
+    }
+    .tittle1{
+        display: block;
+        font-size: 45px;
+        text-align: left;
+    }
+    
+    .text1{
+        display: block;
+        font-size: 15px;
+        text-align: left;
+        font-weight: 200;
+        line-height: 1.8;
+        margin-top: 20px;
+    }
+
+    .top__right{
+        display: flex;
+        grid-area:top__right;
+        background-color:blueviolet;
+        height: 600px;
+        width: 100%;
+        justify-items:flex-end;
+        align-items:center;
+        overflow: hidden;
+    }
+    
+    .right__img{
+        display: flex;
+        position: relative;
+        left: 50px;
+        width: 480px;
+    }
+
+    .service__cards{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        text-align: center;
+        flex-wrap: wrap;  
+        height: 530px;
+        width: 400px;
+    }
+    
+    .card__info{
+        display: block;
+        width: 400px;
+        padding: 5px 30px 30px 30px;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    .tittle__card{
+        display: block;
+        font-size: 30px;
+    }
+    
+    .text__card{
+        display: block;
+        font-size: 14px;
+        margin: 10px 0px 40px 0px;
+        line-height: 1.8;
+        font-weight: 300;
+    }
+
+    .card .card__img{
+        width: 410px;
+        overflow: hidden;
+    }
+    
+    .card__img{
+        display: block;
+        position: relative;
+        top: -20px; 
+    }
+
+    .service1{
+        justify-content:flex-end;
+        align-items:flex-end;
+        text-align: center;
+        height: 600px;
+        padding: 0px 15px 0px 50px;
+    }
+
+    .service2{
+        justify-content:flex-start;
+        align-items:flex-end;
+        text-align: center;
+        height: 600px;
+        padding: 0px 30px 0px 15px;
+        
+    }
+    
+    .service3{
+        justify-content:flex-end;
+        align-items:flex-start;
+        text-align: center;
+        height: 600px;
+        padding: 30px 15px 0px 30px;
+        
+    }
+    
+    .service4{
+        justify-content:flex-start;
+        align-items:flex-start;
+        text-align: center;
+        height: 600px;
+        padding: 30px 30px 0px 15px;
+        
+    }
+
+    .footer .footer__img{
+        display: block;
+        position: relative;
+        left: 100px;
+        height: 250px;
+    }
+    
+    .content__3{
+        display: inline-block;
+        margin-left: 150px;
+        margin-right: 100px;
+        
+      }
+
+}
+
+@media only screen and (min-width: 1440px) {
+    .grid__container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "top__left top__right"
+        "service1 service2"
+        "service3 service4"
+        "aditional__info aditional__info "
+        "footer footer";
+        overflow-x: hidden;
+    }
+    .top__left{
+        height: 600px;
+        width: 100%;
+    }
+
+    .content__top{
+        padding:0px 0px 0px 200px
+        
+    }
+    .tittle1{
+        font-size: 45px;
+    }
+    
+    .text1{
+        font-size: 18px;
+    }
+
+    .right__img{
+        width: 680px;
+    }
+
+    .service__cards{
+        width: 500px;
+    }
+    
+    .card__info{
+        display: block;
+        width: 500px;
+        padding: 5px 40px 40px 40px;
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+    }
+    
+    .tittle__card{
+        display: block;
+        font-size: 30px;
+    }
+    
+    .text__card{
+        display: block;
+        font-size: 14px;
+        margin: 10px 0px 40px 0px;
+        line-height: 1.8;
+        font-weight: 300;
+    }
+
+    .card .card__img{
+        width: 520px;
+        overflow: hidden;
+    }
+    
+    .card__img{
+        display: block;
+        position: relative;
+        top: -40px; 
+    }
+
+    .service1{
+        justify-content:flex-end;
+        align-items:flex-end;
+        text-align: center;
+        height: 600px;
+        padding: 0px 15px 0px 50px;
+    }
+
+    .service2{
+        justify-content:flex-start;
+        align-items:flex-end;
+        text-align: center;
+        height: 600px;
+        padding: 0px 30px 0px 15px;
+        
+    }
+    
+    .service3{
+        justify-content:flex-end;
+        align-items:flex-start;
+        text-align: center;
+        height: 600px;
+        padding: 30px 15px 0px 30px;
+        
+    }
+    
+    .service4{
+        justify-content:flex-start;
+        align-items:flex-start;
+        text-align: center;
+        height: 600px;
+        padding: 30px 30px 0px 15px;
+        
+    }
+
+    .footer .footer__img{
+        display: block;
+        position: relative;
+        left: 100px;
+        height: 250px;
+    }
+    
+    .content__3{
+        display: inline-block;
+        margin-left: 150px;
+        margin-right: 100px;
+        
+      }
+
+}
+
+
