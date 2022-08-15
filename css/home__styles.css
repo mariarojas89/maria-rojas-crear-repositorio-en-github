@@ -175,7 +175,8 @@ body{
     grid-template-columns: 1fr 1fr;
     grid-column: 1/3;
     grid-row: 1/2;
-    background-color:blueviolet;
+    background: rgb(0,0,0);
+background: linear-gradient(173deg, rgba(0,0,0,1) 0%, rgba(157,9,255,1) 100%);
     font-family: 'Poppins', sans-serif;
     color: white; 
     height: 900px;
@@ -235,6 +236,11 @@ body{
     margin-right: 20px;
 }
 
+.demo__btn:hover{
+    background-color: rgba(176, 255, 244, 0.5);
+    color: white;
+}
+
 .about__btn{
     color: white;
     background-color: rgba(0, 0, 0, 0.473);
@@ -247,6 +253,11 @@ body{
     border-width: 1px;
     border-radius: 5px;
     font-family: 'Poppins', sans-serif;
+}
+
+.about__btn:hover{
+    background-color: rgba(255, 16, 235, 0.5);
+    color: white;
 }
 /* welcome ends*/
 
@@ -331,6 +342,10 @@ body{
     overflow: hidden;
 }
 
+.card:hover{
+    background-color: blueviolet;
+}
+
 .card__info{
     display: block;
     padding: 40px 60px 60px 60px;
@@ -342,7 +357,11 @@ body{
     font-size: 40px;
     font-weight: 700;
     line-break: veryloose;
-    color: blueviolet;
+    color: black;
+}
+
+.card:hover .tittle__card{
+    color: white;
 }
 
 .text__card{
@@ -353,14 +372,23 @@ body{
     margin: 20px 0px 40px 0px;
 }
 
+.card:hover .text__card{
+    color: white;
+}
+
 .card__btn{
     background-color: white;
     height: 40px;
     width: 100px;
     border-style: solid;
-    border-color:blueviolet;
+    border-color:black;
     border-width: 1px;
     border-radius: 5px;
+}
+
+.card:hover .card__btn{
+    background-color: rgb(94, 255, 174);
+    border-color:rgb(94, 255, 174);
 }
 
 .btn__text{
@@ -375,7 +403,7 @@ body{
 footer{
     display: flex;
     background-color: black;
-    height: 300px;
+    height: 100px;
     grid-column: 1/3;
     grid-row: 3/4;
 }
@@ -401,15 +429,18 @@ footer{
         font-family: 'Poppins', sans-serif;
         color: white; 
         height: 880px;
-        width: fit-content;
+        width: 320;
         align-items: center;
         justify-items: center;
         padding-top: 100px;
     }
 
     .left__side{
-        display: block;
+        display: flex;
+        flex-direction: column;
         text-align: center;
+        align-items: center;
+        justify-items: center;
         margin-left: 0px;
     }
     
@@ -420,7 +451,7 @@ footer{
         margin-bottom: 20px;  
         line-break: loose; 
         color: rgb(94, 255, 174);
-        margin: 0px 60px 0px 60px;
+        margin: 0px 30px 0px 0px;
     }
     
     .text__1{
@@ -428,7 +459,7 @@ footer{
         font-size: 13px;
         font-weight: 100;
         line-height: 1.8;
-        margin: 50px 60px 60px 60px;
+        margin: 50px 80px 60px 50px;
     }
     
     .home__img2{
@@ -441,7 +472,11 @@ footer{
         height: 200px;
         top: 20px;
     }
-    
+    .home__bts{
+        display: flex;
+        flex-direction: column;
+        padding-right: 15px;
+    }
     
     .demo__btn{
         display: block;
@@ -449,11 +484,11 @@ footer{
         background-color: rgb(94, 255, 174);
         border-style: none;
         height: 50px;
-        width: 200px;
+        width: 150px;
         font-size: 14px;
         font-weight: 300;
         line-break: veryloose;
-        border-width: 1px;
+        border-width: 2px;
         border-radius: 5px;
         font-family: 'Poppins', sans-serif;
         margin-right: 0px;
@@ -466,7 +501,7 @@ footer{
         background-color: rgba(0, 0, 0, 0.473);
         border-style: none;
         height: 50px;
-        width: 200px;
+        width: 150px;
         font-size: 14px;
         font-weight: 300;
         line-break: veryloose;
@@ -496,7 +531,7 @@ footer{
         flex-direction: column;
         width: fit-content;
         justify-content: center;
-        align-content: center;
+        align-items: center;
     }
     
     .statement__imgs{
@@ -518,7 +553,7 @@ footer{
         text-align: center;
         font-size: 18px;
         font-weight: 700;
-        padding: 10px 50px 5px 50px;
+        padding: 10px 50px 5px 20px;
     }
     
     .text__2{
@@ -527,7 +562,7 @@ footer{
         text-align: center;
         font-size: 12px;
         font-weight: 300;
-        padding: 5px 50px 50px 50px;
+        padding: 5px 70px 50px 40px;
     }
     
     .service__cards{
@@ -538,7 +573,8 @@ footer{
         width: fit-content;
         gap: 40px;
         justify-content:center;
-        align-content: center;
+        align-items: center;
+        padding-left: 40px;
         
     }
     
@@ -558,7 +594,7 @@ footer{
         height: 430px;
         width: 250px;
         align-items:center;
-        justify-items: center;
+        justify-content: center;
         border-radius: 15px;
         overflow: hidden;
     }
@@ -575,7 +611,7 @@ footer{
         font-size: 20px;
         font-weight: 700;
         line-break: veryloose;
-        color: blueviolet;
+        color: black;
     }
     
     .text__card{
@@ -590,7 +626,7 @@ footer{
         height: 40px;
         width: 100px;
         border-style: solid;
-        border-color:blueviolet;
+        border-color:black;
         border-width: 1px;
         border-radius: 5px;
     }
@@ -607,7 +643,7 @@ footer{
     footer{
         display: flex;
         background-color: black;
-        height: 300px;
+        height: 100px;
         grid-column: 1/3;
         grid-row: 3/4;
     }
@@ -706,7 +742,7 @@ footer{
         flex-direction: column;
         width: fit-content;
         justify-content: center;
-        align-content: center;
+        align-items: center;
     }
     
     .statement__imgs{
@@ -785,7 +821,7 @@ footer{
         font-size: 20px;
         font-weight: 700;
         line-break: veryloose;
-        color: blueviolet;
+        color: black;
     }
     
     .text__card{
@@ -800,7 +836,7 @@ footer{
         height: 40px;
         width: 100px;
         border-style: solid;
-        border-color:blueviolet;
+        border-color:black;
         border-width: 1px;
         border-radius: 5px;
     }
@@ -817,7 +853,7 @@ footer{
     footer{
         display: flex;
         background-color: black;
-        height: 300px;
+        height: 100px;
         grid-column: 1/3;
         grid-row: 3/4;
     }
@@ -998,7 +1034,7 @@ footer{
         font-size: 20px;
         font-weight: 700;
         line-break: veryloose;
-        color: blueviolet;
+        color: black;
     }
     
     .text__card{
@@ -1013,7 +1049,7 @@ footer{
         height: 40px;
         width: 100px;
         border-style: solid;
-        border-color:blueviolet;
+        border-color:black;
         border-width: 1px;
         border-radius: 5px;
     }
@@ -1030,7 +1066,7 @@ footer{
     footer{
         display: flex;
         background-color: black;
-        height: 300px;
+        height: 100px;
         grid-column: 1/3;
         grid-row: 3/4;
     }
@@ -1250,7 +1286,7 @@ footer{
         font-size: 30px;
         font-weight: 700;
         line-break: veryloose;
-        color: blueviolet;
+        color: black;
     }
     
     .text__card{
@@ -1266,7 +1302,7 @@ footer{
         height: 40px;
         width: 100px;
         border-style: solid;
-        border-color:blueviolet;
+        border-color:black;
         border-width: 1px;
         border-radius: 5px;
     }
@@ -1283,7 +1319,7 @@ footer{
     footer{
         display: flex;
         background-color: black;
-        height: 300px;
+        height: 100px;
         grid-column: 1/3;
         grid-row: 3/4;
     }
@@ -1471,7 +1507,7 @@ footer{
         font-size: 40px;
         font-weight: 700;
         line-break: veryloose;
-        color: blueviolet;
+        color: black;
     }
     
     .text__card{
@@ -1487,7 +1523,7 @@ footer{
         height: 40px;
         width: 100px;
         border-style: solid;
-        border-color:blueviolet;
+        border-color:black;
         border-width: 1px;
         border-radius: 5px;
     }
@@ -1504,7 +1540,7 @@ footer{
     footer{
         display: flex;
         background-color: black;
-        height: 300px;
+        height: 100px;
         grid-column: 1/3;
         grid-row: 3/4;
     }
